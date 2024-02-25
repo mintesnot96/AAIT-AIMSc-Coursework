@@ -1,0 +1,129 @@
+========================= Input Size: 200 =========================
+Running PThread with display - Size: 200, Threads: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 37.975243 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 200, Threads: 2
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 36.271445 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 200, Threads: 4
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 33.393239 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 200, Threads: 8
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 29.869229 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 200, Threads: 16
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 29.234513 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 200, Threads: 32
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 30.620294 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 2000 =========================
+Running PThread with display - Size: 2000, Threads: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 4080.854901 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 2000, Threads: 2
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3997.169017 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 2000, Threads: 4
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3777.417822 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 2000, Threads: 8
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3793.744058 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 2000, Threads: 16
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3872.744058 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 2000, Threads: 32
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3878.744058 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 4000 =========================
+Running PThread with display - Size: 4000, Threads: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11784.854901 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 4000, Threads: 2
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11570.169017 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 4000, Threads: 4
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11268.364724 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 4000, Threads: 8
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11280.895423 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 4000, Threads: 16
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11283.934794 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread with display - Size: 4000, Threads: 32
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 11287.358348 sec.
+Press enter to end.
+---------------------------------------------------

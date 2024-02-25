@@ -1,0 +1,223 @@
+========================= Input Size: 200 =========================
+Running OpenMP without display - Size: 200, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 1.09521 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 200, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.507500 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 200, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.270088 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 200, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.137024 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 200, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.256982 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 200, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.264553 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 2000 =========================
+Running OpenMP without display - Size: 2000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 62.476823 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 2000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 34.182365 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 2000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 22.258970 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 2000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 16.028924 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 2000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 17.277525 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 2000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 18.074120 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 4000 =========================
+Running OpenMP without display - Size: 4000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 245.380726 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 4000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 132.257201 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 4000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 93.053196 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 4000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 49.959719 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 4000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 51.868397 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 4000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 53.058985 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 6000 =========================
+Running OpenMP without display - Size: 6000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 584.275841 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 6000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 311.595247 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 6000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 167.381718 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 6000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 85.604737 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 6000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 91.543897 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 6000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 98.596086 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 8000 =========================
+Running OpenMP without display - Size: 8000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 1128.789000 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 8000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 566.027628 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 8000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 292.635502 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 8000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 199.527602 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 8000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 215.725352 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 8000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 218.083407 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 10000 =========================
+Running OpenMP without display - Size: 10000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 2388.513655 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 10000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 1123.615889 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 10000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 571.797300 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 10000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 297.915821 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 10000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 301.831828 sec.
+Press enter to end.
+---------------------------------------------------
+Running OpenMP without display - Size: 10000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 312.963462 sec.
+Press enter to end.
+---------------------------------------------------
+All OpenMP simulations without display completed.

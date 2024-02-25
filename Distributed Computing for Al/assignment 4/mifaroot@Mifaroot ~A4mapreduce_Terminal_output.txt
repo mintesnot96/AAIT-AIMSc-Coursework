@@ -1,0 +1,389 @@
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -copyFromLocal ~/A4mapreduce/data/books /input
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -ls /input/myfile.txt
+ls: `/input/myfile.txt': No such file or directory
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -ls /input/
+Found 1 items
+drwxr-xr-x   - mifaroot supergroup          0 2024-02-09 23:26 /input/books
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -ls /input/books
+Found 10 items
+-rw-r--r--   1 mifaroot supergroup     262343 2024-02-09 23:26 /input/books/A_visit_to_the_Roman_catacombs_pg71927.txt
+-rw-r--r--   1 mifaroot supergroup    5281878 2024-02-09 23:26 /input/books/History_For_Ready_Reference_pg71897.txt
+-rw-r--r--   1 mifaroot supergroup     662750 2024-02-09 23:26 /input/books/Little_Women_pg37106.txt
+-rw-r--r--   1 mifaroot supergroup    1865775 2024-02-09 23:26 /input/books/Middlemarch_pg145.txt
+-rw-r--r--   1 mifaroot supergroup     859228 2024-02-09 23:26 /input/books/The_Australian_aboriginal_pg71940.txt
+-rw-r--r--   1 mifaroot supergroup     541195 2024-02-09 23:26 /input/books/The_Green_hat_pg71913.txt
+-rw-r--r--   1 mifaroot supergroup     227414 2024-02-09 23:26 /input/books/The_Iliad_pg6130.txt
+-rw-r--r--   1 mifaroot supergroup     239450 2024-02-09 23:26 /input/books/The_Romance_of_Lust_pg30254.txt
+-rw-r--r--   1 mifaroot supergroup     103995 2024-02-09 23:26 /input/books/The_Tempest_pg23042.txt
+-rw-r--r--   1 mifaroot supergroup    1210107 2024-02-09 23:26 /input/books/elements_of_meta_physics_pg71885.txt
+mifaroot@Mifaroot:~/A4mapreduce$ ls
+CountWithoutStop.java  SortWord.java  WordCount.java  data  local_output  stopwords.txt
+mifaroot@Mifaroot:~/A4mapreduce$ javac -classpath `hadoop classpath` WordCount.java
+mifaroot@Mifaroot:~/A4mapreduce$ jar cf wordcount.jar WordCount*.class
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop jar wordcount.jar WordCount /input/data /word_count_output/word_count_with_stop_word
+2024-02-10 00:25:36,654 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2024-02-10 00:25:37,525 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-02-10 00:25:37,537 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0007
+2024-02-10 00:25:38,522 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0007
+Exception in thread "main" org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://localhost:9000/input/data
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:340)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.listStatus(FileInputFormat.java:279)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.getSplits(FileInputFormat.java:404)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeNewSplits(JobSubmitter.java:310)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeSplits(JobSubmitter.java:327)
+        at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:200)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1678)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1675)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+        at org.apache.hadoop.mapreduce.Job.submit(Job.java:1675)
+        at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1696)
+        at WordCount.main(WordCount.java:60)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
+Caused by: java.io.IOException: Input path does not exist: hdfs://localhost:9000/input/data
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:313)
+        ... 19 more
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -mkdir /word_count_output
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop jar wordcount.jar WordCount /input/data /word_count_output/word_count_with_stop_word
+2024-02-10 00:26:37,723 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2024-02-10 00:26:38,524 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-02-10 00:26:38,562 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0008
+2024-02-10 00:26:39,083 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0008
+Exception in thread "main" org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://localhost:9000/input/data
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:340)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.listStatus(FileInputFormat.java:279)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.getSplits(FileInputFormat.java:404)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeNewSplits(JobSubmitter.java:310)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeSplits(JobSubmitter.java:327)
+        at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:200)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1678)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1675)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+        at org.apache.hadoop.mapreduce.Job.submit(Job.java:1675)
+        at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1696)
+        at WordCount.main(WordCount.java:60)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
+Caused by: java.io.IOException: Input path does not exist: hdfs://localhost:9000/input/data
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:313)
+        ... 19 more
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop jar wordcount.jar WordCount /input/data/books /word_count_output/word_count_with_stop_word
+2024-02-10 00:27:55,688 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2024-02-10 00:27:56,344 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-02-10 00:27:56,375 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0009
+2024-02-10 00:27:56,830 INFO mapreduce.JobSubmitter: Cleaning up the staging area /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0009
+Exception in thread "main" org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://localhost:9000/input/data/books
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:340)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.listStatus(FileInputFormat.java:279)
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.getSplits(FileInputFormat.java:404)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeNewSplits(JobSubmitter.java:310)
+        at org.apache.hadoop.mapreduce.JobSubmitter.writeSplits(JobSubmitter.java:327)
+        at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:200)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1678)
+        at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1675)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+        at org.apache.hadoop.mapreduce.Job.submit(Job.java:1675)
+        at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1696)
+        at WordCount.main(WordCount.java:60)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
+Caused by: java.io.IOException: Input path does not exist: hdfs://localhost:9000/input/data/books
+        at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:313)
+        ... 19 more
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop jar wordcount.jar WordCount /input/books /word_count_output/word_count_with_stop_word
+2024-02-10 00:28:52,026 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2024-02-10 00:28:52,700 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-02-10 00:28:52,734 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0010
+2024-02-10 00:28:53,262 INFO input.FileInputFormat: Total input files to process : 10
+2024-02-10 00:28:53,377 INFO mapreduce.JobSubmitter: number of splits:10
+2024-02-10 00:28:54,067 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1707483942722_0010
+2024-02-10 00:28:54,067 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2024-02-10 00:28:54,423 INFO conf.Configuration: resource-types.xml not found
+2024-02-10 00:28:54,423 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2024-02-10 00:28:54,633 INFO impl.YarnClientImpl: Submitted application application_1707483942722_0010
+2024-02-10 00:28:54,749 INFO mapreduce.Job: The url to track the job: http://Mifaroot.:8088/proxy/application_1707483942722_0010/
+2024-02-10 00:28:54,750 INFO mapreduce.Job: Running job: job_1707483942722_0010
+2024-02-10 00:29:08,049 INFO mapreduce.Job: Job job_1707483942722_0010 running in uber mode : false
+2024-02-10 00:29:08,051 INFO mapreduce.Job:  map 0% reduce 0%
+2024-02-10 00:29:31,840 INFO mapreduce.Job:  map 10% reduce 0%
+2024-02-10 00:29:32,859 INFO mapreduce.Job:  map 40% reduce 0%
+2024-02-10 00:29:34,920 INFO mapreduce.Job:  map 50% reduce 0%
+2024-02-10 00:29:38,075 INFO mapreduce.Job:  map 57% reduce 0%
+2024-02-10 00:29:39,117 INFO mapreduce.Job:  map 60% reduce 0%
+2024-02-10 00:29:52,507 INFO mapreduce.Job:  map 70% reduce 0%
+2024-02-10 00:29:53,528 INFO mapreduce.Job:  map 90% reduce 0%
+2024-02-10 00:29:54,539 INFO mapreduce.Job:  map 100% reduce 0%
+2024-02-10 00:29:58,573 INFO mapreduce.Job:  map 100% reduce 100%
+2024-02-10 00:29:59,596 INFO mapreduce.Job: Job job_1707483942722_0010 completed successfully
+2024-02-10 00:29:59,768 INFO mapreduce.Job: Counters: 55
+        File System Counters
+                FILE: Number of bytes read=20711573
+                FILE: Number of bytes written=44462038
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=11255423
+                HDFS: Number of bytes written=564383
+                HDFS: Number of read operations=35
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+                Killed map tasks=2
+                Launched map tasks=11
+                Launched reduce tasks=1
+                Data-local map tasks=11
+                Total time spent by all maps in occupied slots (ms)=223265
+                Total time spent by all reduces in occupied slots (ms)=21772
+                Total time spent by all map tasks (ms)=223265
+                Total time spent by all reduce tasks (ms)=21772
+                Total vcore-milliseconds taken by all map tasks=223265
+                Total vcore-milliseconds taken by all reduce tasks=21772
+                Total megabyte-milliseconds taken by all map tasks=228623360
+                Total megabyte-milliseconds taken by all reduce tasks=22294528
+        Map-Reduce Framework
+                Map input records=233454
+                Map output records=1768774
+                Map output bytes=17174019
+                Map output materialized bytes=20711627
+                Input split bytes=1288
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=48963
+                Reduce shuffle bytes=20711627
+                Reduce input records=1768774
+                Reduce output records=48963
+                Spilled Records=3537548
+                Shuffled Maps =10
+                Failed Shuffles=0
+                Merged Map outputs=10
+                GC time elapsed (ms)=3571
+                CPU time spent (ms)=91980
+                Physical memory (bytes) snapshot=3747192832
+                Virtual memory (bytes) snapshot=30215315456
+                Total committed heap usage (bytes)=2413821952
+                Peak Map Physical memory (bytes)=382685184
+                Peak Map Virtual memory (bytes)=2764210176
+                Peak Reduce Physical memory (bytes)=248832000
+                Peak Reduce Virtual memory (bytes)=2739150848
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=11254135
+        File Output Format Counters
+                Bytes Written=564383
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -get /word_count_output/word_count_with_stop_word ~/A4mapreduce/local_output
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -ls /word_count_output/word_count_with_stop_word
+Found 2 items
+-rw-r--r--   1 mifaroot supergroup          0 2024-02-10 00:29 /word_count_output/word_count_with_stop_word/_SUCCESS
+-rw-r--r--   1 mifaroot supergroup     564383 2024-02-10 00:29 /word_count_output/word_count_with_stop_word/part-r-00000
+mifaroot@Mifaroot:~/A4mapreduce$ ls
+ CountWithoutStop.java   SortWord.java  'WordCount$IntSumReducer.class'  'WordCount$TokenizerMapper.class'   WordCount.class   WordCount.javadata   local_output   stopwords.txt   wordcount.jar
+mifaroot@Mifaroot:~/A4mapreduce$ cd local_output
+mifaroot@Mifaroot:~/A4mapreduce/local_output$ ls
+word_count_with_stop_word
+mifaroot@Mifaroot:~/A4mapreduce/local_output$ cd word_count_with_stop_word
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_with_stop_word$ ls
+_SUCCESS  part-r-00000
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_with_stop_word$ cd ..
+mifaroot@Mifaroot:~/A4mapreduce/local_output$ cd ..
+mifaroot@Mifaroot:~/A4mapreduce$ ls
+ CountWithoutStop.java   SortWord.java  'WordCount$IntSumReducer.class'  'WordCount$TokenizerMapper.class'   WordCount.class   WordCount.javadata   local_output   stopwords.txt   wordcount.jar
+mifaroot@Mifaroot:~/A4mapreduce$ javac SortWord.java
+mifaroot@Mifaroot:~/A4mapreduce$ java SortWord local_output\word_count_with_stop_word/part-r-00000
+java.io.FileNotFoundException: local_outputword_count_with_stop_word/part-r-00000 (No such file or directory)
+        at java.base/java.io.FileInputStream.open0(Native Method)
+        at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+        at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+        at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+        at java.base/java.io.FileReader.<init>(FileReader.java:60)
+        at SortWord.main(SortWord.java:20)
+mifaroot@Mifaroot:~/A4mapreduce$ java SortWord local_output/word_count_with_stop_word/part-r-00000
+The top 25 words with highest counts
+the - 128046
+of - 79598
+and - 52442
+to - 49129
+in - 36484
+a - 35970
+that - 20586
+is - 16232
+it - 16069
+as - 15305
+was - 14943
+for - 13702
+with - 13671
+be - 13627
+i - 13118
+by - 12471
+which - 11385
+on - 10351
+he - 9929
+not - 9851
+this - 9561
+at - 9555
+his - 9111
+her - 9091
+had - 8508
+mifaroot@Mifaroot:~/A4mapreduce$ ls
+ CountWithoutStop.java   SortWord.class   SortWord.java  'WordCount$IntSumReducer.class'  'WordCount$TokenizerMapper.class'   WordCount.classWordCount.java   data   local_output   stopwords.txt   wordcount.jar
+mifaroot@Mifaroot:~/A4mapreduce$ javac -classpath `hadoop classpath` -d . CountWithoutStop.java
+mifaroot@Mifaroot:~/A4mapreduce$ jar cf word_count_without_stop_word.jar  CountWithoutStop*.class
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop jar word_count_without_stop_word.jar CountWithoutStop /input/books /word_count_output/word_count_without_stop_word
+2024-02-10 02:50:47,595 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+2024-02-10 02:50:48,458 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-02-10 02:50:48,508 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/mifaroot/.staging/job_1707483942722_0011
+2024-02-10 02:50:49,530 INFO input.FileInputFormat: Total input files to process : 10
+2024-02-10 02:50:49,653 INFO mapreduce.JobSubmitter: number of splits:10
+2024-02-10 02:50:49,962 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1707483942722_0011
+2024-02-10 02:50:49,963 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2024-02-10 02:50:50,370 INFO conf.Configuration: resource-types.xml not found
+2024-02-10 02:50:50,371 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2024-02-10 02:50:50,577 INFO impl.YarnClientImpl: Submitted application application_1707483942722_0011
+2024-02-10 02:50:50,680 INFO mapreduce.Job: The url to track the job: http://Mifaroot.:8088/proxy/application_1707483942722_0011/
+2024-02-10 02:50:50,681 INFO mapreduce.Job: Running job: job_1707483942722_0011
+2024-02-10 02:51:03,046 INFO mapreduce.Job: Job job_1707483942722_0011 running in uber mode : false
+2024-02-10 02:51:03,049 INFO mapreduce.Job:  map 0% reduce 0%
+2024-02-10 02:51:26,942 INFO mapreduce.Job:  map 20% reduce 0%
+2024-02-10 02:51:27,981 INFO mapreduce.Job:  map 30% reduce 0%
+2024-02-10 02:51:29,010 INFO mapreduce.Job:  map 50% reduce 0%
+2024-02-10 02:51:33,203 INFO mapreduce.Job:  map 60% reduce 0%
+2024-02-10 02:51:47,645 INFO mapreduce.Job:  map 70% reduce 0%
+2024-02-10 02:51:48,671 INFO mapreduce.Job:  map 90% reduce 0%
+2024-02-10 02:51:49,698 INFO mapreduce.Job:  map 100% reduce 0%
+2024-02-10 02:51:52,733 INFO mapreduce.Job:  map 100% reduce 100%
+2024-02-10 02:51:53,762 INFO mapreduce.Job: Job job_1707483942722_0011 completed successfully
+2024-02-10 02:51:53,981 INFO mapreduce.Job: Counters: 55
+        File System Counters
+                FILE: Number of bytes read=9735321
+                FILE: Number of bytes written=22511712
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=11255423
+                HDFS: Number of bytes written=556970
+                HDFS: Number of read operations=35
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+                Killed map tasks=2
+                Launched map tasks=10
+                Launched reduce tasks=1
+                Data-local map tasks=10
+                Total time spent by all maps in occupied slots (ms)=213196
+                Total time spent by all reduces in occupied slots (ms)=22507
+                Total time spent by all map tasks (ms)=213196
+                Total time spent by all reduce tasks (ms)=22507
+                Total vcore-milliseconds taken by all map tasks=213196
+                Total vcore-milliseconds taken by all reduce tasks=22507
+                Total megabyte-milliseconds taken by all map tasks=218312704
+                Total megabyte-milliseconds taken by all reduce tasks=23047168
+        Map-Reduce Framework
+                Map input records=233454
+                Map output records=694118
+                Map output bytes=8347079
+                Map output materialized bytes=9735375
+                Input split bytes=1288
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=48239
+                Reduce shuffle bytes=9735375
+                Reduce input records=694118
+                Reduce output records=48239
+                Spilled Records=1388236
+                Shuffled Maps =10
+                Failed Shuffles=0
+                Merged Map outputs=10
+                GC time elapsed (ms)=3885
+                CPU time spent (ms)=95370
+                Physical memory (bytes) snapshot=3742949376
+                Virtual memory (bytes) snapshot=30250463232
+                Total committed heap usage (bytes)=2444230656
+                Peak Map Physical memory (bytes)=421474304
+                Peak Map Virtual memory (bytes)=2769911808
+                Peak Reduce Physical memory (bytes)=245231616
+                Peak Reduce Virtual memory (bytes)=2766655488
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=11254135
+        File Output Format Counters
+                Bytes Written=556970
+mifaroot@Mifaroot:~/A4mapreduce$ hadoop fs -get /word_count_output/word_count_without_stop_word ~/A4mapreduce/local_output
+mifaroot@Mifaroot:~/A4mapreduce$ cd ..
+mifaroot@Mifaroot:~$ ls
+A4mapreduce  card  demo.csv  dist  hadoop-3.3.6  hadoop-3.3.6.tar.gz  stream  xai
+mifaroot@Mifaroot:~$ cd A4mapreduce
+mifaroot@Mifaroot:~/A4mapreduce$ cd local_output
+mifaroot@Mifaroot:~/A4mapreduce/local_output$ cd word_count_without_stop_word
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_without_stop_word$ ls
+_SUCCESS  part-r-00000
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_without_stop_word$ java SortWord word_count_output/word_count_without_stop_word/part-r-00000
+Error: Could not find or load main class SortWord
+Caused by: java.lang.ClassNotFoundException: SortWord
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_without_stop_word$ java SortWord local_output/word_count_without_stop_word/part-r-00000
+Error: Could not find or load main class SortWord
+Caused by: java.lang.ClassNotFoundException: SortWord
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_without_stop_word$ javac SortWord.java
+javac: file not found: SortWord.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+mifaroot@Mifaroot:~/A4mapreduce/local_output/word_count_without_stop_word$ cd ..
+mifaroot@Mifaroot:~/A4mapreduce/local_output$ cd ..
+mifaroot@Mifaroot:~/A4mapreduce$ java SortWord local_output/word_count_without_stop_word/part-r-00000
+The top 25 words with highest counts
+government - 2723
+united - 2559
+time - 2488
+great - 2161
+volume - 1995
+people - 1610
+general - 1596
+men - 1579
+man - 1576
+good - 1395
+work - 1274
+life - 1175
+thought - 1162
+years - 1148
+south - 1132
+war - 1129
+long - 1099
+british - 1078
+order - 1054
+day - 1036
+american - 980
+number - 977
+hand - 955
+president - 950
+country - 942
+mifaroot@Mifaroot:~/A4mapreduce$

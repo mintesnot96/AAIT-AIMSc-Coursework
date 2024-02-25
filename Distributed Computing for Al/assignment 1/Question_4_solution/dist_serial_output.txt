@@ -1,0 +1,57 @@
+mifaroot@Mifaroot:~$ cd distribute_syst_assign
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 1
+Number of Iterations = 1
+Sequential Calculation of PI: 4.000000
+Time taken: 0.000001 seconds
+Difference from actual PI: 0.858407
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 10
+Number of Iterations = 10
+Sequential Calculation of PI: 3.041840
+Time taken: 0.000002 seconds
+Difference from actual PI: -0.099753
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 100
+Number of Iterations = 100
+Sequential Calculation of PI: 3.131593
+Time taken: 0.000004 seconds
+Difference from actual PI: -0.010000
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 1000
+Number of Iterations = 1000
+Sequential Calculation of PI: 3.140593
+Time taken: 0.000006 seconds
+Difference from actual PI: -0.001000
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 10000
+Number of Iterations = 10000
+Sequential Calculation of PI: 3.141493
+Time taken: 0.000087 seconds
+Difference from actual PI: -0.000100
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 100000
+Number of Iterations = 100000
+Sequential Calculation of PI: 3.141583
+Time taken: 0.000604 seconds
+Difference from actual PI: -0.000010
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 1000000
+Number of Iterations = 1000000
+Sequential Calculation of PI: 3.141592
+Time taken: 0.006053 seconds
+Difference from actual PI: -0.000001
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 10000000
+Number of Iterations = 10000000
+Sequential Calculation of PI: 3.141593
+Time taken: 0.053905 seconds
+Difference from actual PI: -0.000000
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 100000000
+Number of Iterations = 100000000
+Sequential Calculation of PI: 3.141593
+Time taken: 0.658546 seconds
+Difference from actual PI: -0.000000
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial pi_serial.c && ./pi_serial 1000000000
+Number of Iterations = 1000000000
+Sequential Calculation of PI: 3.141593
+Time taken: 5.963491 seconds
+Difference from actual PI: -0.000000
+mifaroot@Mifaroot:~/distribute_syst_assign$ gcc -o pi_serial -O3 pi_serial.c && ./pi_serial 1000000000
+Number of Iterations = 1000000000
+Sequential Calculation of PI: 3.141593
+Time taken: 2.569313 seconds
+Difference from actual PI: -0.000000
+mifaroot@Mifaroot:~/distribute_syst_assign$

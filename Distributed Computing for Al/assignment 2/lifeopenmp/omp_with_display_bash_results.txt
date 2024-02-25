@@ -1,0 +1,88 @@
+========================= Input Size: 200 =========================
+Running with display - Size: 200, Threads: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+
+Warning: slow font initializationqt_processTermEvent received a GE_fontprops event. This should not have happened
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 33.554400 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 200, Threads: 2
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 31.009132 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 200, Threads: 4
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 30.044685 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 200, Threads: 8
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 29.197267 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 200, Threads: 16
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 30.867721 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 200, Threads: 32
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 31.182395 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 2000 =========================
+Running with display - Size: 2000, Threads: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 4450.509178 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 2000, Threads: 2
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 4031.874142 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 2000, Threads: 4
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3738.829616 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 2000, Threads: 8
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3541.457182 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 2000, Threads: 16
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3655.874142 sec.
+Press enter to end.
+---------------------------------------------------
+Running with display - Size: 2000, Threads: 32
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 3669.725689 sec.
+Press enter to end.
+---------------------------------------------------

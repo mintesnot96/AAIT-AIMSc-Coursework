@@ -1,0 +1,223 @@
+========================= Input Size: 200 =========================
+Running PThread without display - Size: 200, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.918148 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 200, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.497109 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 200, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.287071 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 200, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.127035 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 200, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.135927 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 200, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 0.1565075 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 2000 =========================
+Running PThread without display - Size: 2000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 76.658001 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 2000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 52.091835 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 2000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 23.820402 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 2000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 15.607831 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 2000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 15.786297 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 2000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 15.429960 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 4000 =========================
+Running PThread without display - Size: 4000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 265.695111 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 4000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 128.727205 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 4000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 72.162929 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 4000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 35.478713 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 4000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 37.178498 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 4000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 37.923513 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 6000 =========================
+Running PThread without display - Size: 6000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 704.683263 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 6000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 338.966566 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 6000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 199.073182 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 6000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 88.895731 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 6000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 89.067306 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 6000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 90.561788 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 8000 =========================
+Running PThread without display - Size: 8000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 890.216624 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 8000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 469.086369 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 8000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 275.580802 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 8000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 179.615751 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 8000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 181.857672 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 8000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 181.996841 sec.
+Press enter to end.
+---------------------------------------------------
+========================= Input Size: 10000 =========================
+Running PThread without display - Size: 10000, Threads: 1
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 1540.454639 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 10000, Threads: 2
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 793.203419 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 10000, Threads: 4
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 479.636168 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 10000, Threads: 8
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 277.738412 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 10000, Threads: 16
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 278.346904 sec.
+Press enter to end.
+---------------------------------------------------
+Running PThread without display - Size: 10000, Threads: 32
+probability: 0.500000
+Random # generator seed: 1234
+Running time for the iterations: 281.720238 sec.
+Press enter to end.
+---------------------------------------------------
+All PThread simulations without display completed.

@@ -1,0 +1,86 @@
+mifaroot@Mifaroot:~$ cd distributed_syst_assign
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -fopenmp pi_openmp.c && ./pi_openmp 1000000000 1
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 1
+
+Parallel calculation is VALID!
+Sequential Time: 5.432792
+Parallel Time: 5.416139
+Speedup:  1.003075
+Efficiency: 1.003075
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -fopenmp pi_openmp.c && ./pi_openmp 1000000000 2
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 2
+
+Parallel calculation is VALID!
+Sequential Time: 5.441055
+Parallel Time: 2.868835
+Speedup:  1.896608
+Efficiency: 0.948304
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -fopenmp pi_openmp.c && ./pi_openmp 1000000000 4
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 4
+
+Parallel calculation is VALID!
+Sequential Time: 5.463854
+Parallel Time: 1.711541
+Speedup:  3.192360
+Efficiency: 0.798090
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -fopenmp pi_openmp.c && ./pi_openmp 1000000000 8
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 8
+
+Parallel calculation is VALID!
+Sequential Time: 5.459913
+Parallel Time: 1.121892
+Speedup:  4.866701
+Efficiency: 0.608338
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -fopenmp pi_openmp.c && ./pi_openmp 1000000000 16
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 16
+
+Parallel calculation is VALID!
+Sequential Time: 5.425360
+Parallel Time: 1.113831
+Speedup:  4.870900
+Efficiency: 0.304431
+mifaroot@Mifaroot:~/distributed_syst_assign$ gcc -o pi_openmp -O3 -fopenmp pi_openmp.c && ./pi_openmp 1000000000 16
+Sequential Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Parallel Calculation: 3.141593
+This is -0.000000 away from the correct value of PI.
+
+Number of iterations: 1000000000, Number of Threads: 16
+
+Parallel calculation is VALID!
+Sequential Time: 2.417829
+Parallel Time: 0.665453
+Speedup:  3.633358
+Efficiency: 0.227085
+mifaroot@Mifaroot:~/distributed_syst_assign$
